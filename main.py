@@ -7,10 +7,21 @@ from constants import *
 
 # Main function 
 def main():
-    print("Starting asteroids!")
-    print(f"Screen width: {SCREEN_WIDTH}")
-    print(f"Screen height: {SCREEN_HEIGHT}")
-
+    pygame.init()
+    #print("Starting asteroids!")
+    #print(f"Screen width: {SCREEN_WIDTH}")
+    #print(f"Screen height: {SCREEN_HEIGHT}")
+    
+    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    while True:
+        for event in pygame.event.get():
+            if event.type  == pygame.QUIT:
+                return
+        
+        print("Loop running!")
+        screen.fill("black")
+        pygame.display.flip()
+        
 
 
 # ensures main function is only called when the file is run directly 
